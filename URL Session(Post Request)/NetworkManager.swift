@@ -33,18 +33,12 @@ class NetworkManager {
     
     func performPostRequest(with url:String,parameters:[String:Any?],completion:@escaping(_ response:Any,_ success:Bool)->Void )
   {
-        //1.Create URL
+       
         if let url = URL(string: "https://jsonplaceholder.typicode.com/posts"){
-            //2.Create Request with POST Method
+           
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
-            //3.Add Data to parameters
-//            let parameters: [String: Any] = [
-//                "userId": 1193,
-//                "title": "Adwait",
-//                "body": "This is my Body"
-//                ]
-            //4.Add Parameters inside request.
+
             request.httpBody = parameters.percentEscaped().data(using: .utf8)
             
             URLSession.shared.dataTask(with: request) { (data, response, error) in
