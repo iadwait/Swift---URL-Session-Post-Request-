@@ -35,7 +35,7 @@ struct DataModel : Codable {
 }
 
 struct DataModel2 : Codable {
-    let userId : Int?
+    let userId : String?
     let id : Int?
     let title : String?
     let body : String?
@@ -50,7 +50,7 @@ struct DataModel2 : Codable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        userId = try values.decodeIfPresent(Int.self, forKey: .userId)
+        userId = try values.decodeIfPresent(String.self, forKey: .userId)
         id = try values.decodeIfPresent(Int.self, forKey: .id)
         title = try values.decodeIfPresent(String.self, forKey: .title)
         body = try values.decodeIfPresent(String.self, forKey: .body)
