@@ -20,11 +20,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //URL Session
-        //hitGetRequest()
+        hitGetRequest()
         hitPostRequest()
         //Alamofire
-        //hitGetRequestAF()
-        //hitPostRequestAF()
+        hitGetRequestAF()
+        hitPostRequestAF()
     }
     
     

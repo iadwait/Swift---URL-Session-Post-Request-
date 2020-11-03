@@ -32,7 +32,7 @@ class DataHelper2{
                 }
             }else{
                 print("Data Not Received")
-                completion(objDataModel2!,false)//This is where it fails, i want to pass nothing in the 1st Parameter
+                completion([],false)//This is where it fails, i want to pass nothing in the 1st Parameter
             }
         }
     }
@@ -58,7 +58,7 @@ class DataHelper2{
                     }
                 }else{
                     print("Data Not Received")
-                    completion(objDataModel2!,false)//This is where it fails, i want to pass nothing in the 1st Parameter
+                    completion([],false)//This is where it fails, i want to pass nothing in the 1st Parameter
                 }
             }
         }
