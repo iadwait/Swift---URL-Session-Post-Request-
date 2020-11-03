@@ -14,6 +14,8 @@ class NetworkManager {
     static let shared:NetworkManager = NetworkManager()
     let parameters: [String:Any?] = [:]
     
+    
+    //MARK:- Get Request
     func performGetRequest(with url:String,completion:@escaping(_ response:Any,_ success:Bool)->Void )
     {
         if let url = URL(string: url) {
@@ -31,6 +33,8 @@ class NetworkManager {
         }
     }
     
+    
+    //MARK:- Post Request
     func performPostRequest(with url:String,parameters:[String:Any?],completion:@escaping(_ response:Any,_ success:Bool)->Void )
   {
        
