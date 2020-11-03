@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "F9B4BD5D-8F40-4A8D-9467-121CA3A4CD72"
-   type = "1"
+   uuid = "654CD5D0-4579-4A91-A946-872C11A1B557"
+   type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "991125C2-0B72-476C-B48A-C52D26E832DE"
+            uuid = "E96B0A68-9275-478D-BA50-44FF414AC67C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "URL Session(Post Request)/Controller/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "hitGetRequest()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B176A23-ED5F-4C2C-86AC-6791D6190C99"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "URL Session(Post Request)/DataBindHelper/DataHelper2.swift"
+            filePath = "URL Session(Post Request)/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "sendPostRequest(url:parameters:completion:)"
+            landmarkName = "performGetRequest(with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "69989A41-587B-452F-983C-7E7ED07B86B4"
+            uuid = "AABDB2C2-75FD-4331-A568-3AE2AA259DE4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "URL Session(Post Request)/DataBindHelper/DataHelper2.swift"
+            filePath = "URL Session(Post Request)/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "sendPostRequest(url:parameters:completion:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "performGetRequestAF(with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4AB308D0-0AF3-4397-BECC-FC75CC4DED18"
+            uuid = "48332076-1138-4C3E-982E-581F33813DCB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "URL Session(Post Request)/DataBindHelper/DataHelper1.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "sendRequestAF(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC1F612E-F201-4DB8-9CC3-6BC0BF6C856E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "URL Session(Post Request)/Controller/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "hitGetRequest()"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "hitGetRequestAF()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

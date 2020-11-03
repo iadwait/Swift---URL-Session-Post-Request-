@@ -23,14 +23,34 @@ class NetworkManager {
             URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if error != nil{
                     print(error?.localizedDescription ?? "Default Value")
-                    completion("No Data",false)
+                    completion([],false)
                 }else{
                     if let safeData = data{
+                        print(safeData)
                         completion(safeData,true)
                     }
                 }
             }.resume()
         }
+    }
+    
+    func performGetRequestAF(with url:String,completion:@escaping(_ response:Any,_ success:Bool)->Void)
+    {
+        if let url = URL(string: url){
+            AF.request(url).response { response in
+                switch response.result {
+                case .success(let data):
+                    print("Success Alamofire")
+                    if let safeData = data{
+                        //print(safeData)
+                        completion(safeData,true)
+                    }
+                case .failure(let err):
+                    print("Alamofire Error after hiting Request \(err.localizedDescription)")
+                        completion([],false)
+                }
+            } // Closure end
+        } //If Url end
     }
     
     
@@ -65,6 +85,24 @@ class NetworkManager {
                 completion(data,true)
 
             }.resume()
+        }
+    }
+    
+    func performPostRequestAF(with url:String,parameters:[String:Any?],completion:@escaping(_ response:Any,_ success:Bool)->Void )
+    {
+        if let url = URL(string: url){
+            AF.request(url,method: .post,parameters: parameters as Parameters).response { response in
+                switch response.result{
+                case .success(let data):
+                    print("Alamofire Success POST")
+                    if let safeData = data{
+                        completion(safeData,true)
+                    }
+                case .failure(let err):
+                    print("Almofire error Post \(err.localizedDescription)")
+                    completion([],false)
+                }//end of switch
+            }
         }
     }
 }

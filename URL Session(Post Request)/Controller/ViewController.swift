@@ -19,9 +19,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hitGetRequest()
-        hitPostRequest()
-        
+        //URL Session
+        //hitGetRequest()
+        //hitPostRequest()
+        //Alamofire
+        //hitGetRequestAF()
+        hitPostRequestAF()
     }
     
     
@@ -29,7 +32,21 @@ class ViewController: UIViewController {
     {
         DataHelper1().sendRequest(url: "https://jsonplaceholder.typicode.com/posts") { (data, success) in
             if success{
-                let arrDataModel = data
+                let arrDataModel = data as! [DataModel]
+                if let ID = arrDataModel[1].id{
+                    print(ID)
+                }
+            }else{
+                print("Data Not Received")
+            }
+        }
+    }
+    
+    func hitGetRequestAF()
+    {
+        DataHelper1().sendRequestAF(url: "https://jsonplaceholder.typicode.com/posts") { (data, success) in
+            if success{
+                let arrDataModel = data as! [DataModel]
                 if let ID = arrDataModel[1].id{
                     print(ID)
                 }
@@ -59,6 +76,28 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    func hitPostRequestAF()
+    {
+        let parameters: [String: Any] = [
+            "userId": "10",
+            "title": "Adwait",
+            "body": "This is Body"
+        ]
+        DataHelper2().sendPostRequestAF(url: "https://jsonplaceholder.typicode.com/posts", parameters: parameters) { (data, success) in
+            if success{
+                if let postedData = data{
+                    if let body = postedData.body {
+                        print(body)
+                    }
+                }else{
+                    print("Data not received")
+                }
+            }
+            
+        }
+    }
+
     
     @IBAction func btnPostRequestTapped(_ sender: UIButton) {
         //setupPostMethod()
