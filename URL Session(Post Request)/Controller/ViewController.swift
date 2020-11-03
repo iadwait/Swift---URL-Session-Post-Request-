@@ -21,10 +21,10 @@ class ViewController: UIViewController {
         
         //URL Session
         //hitGetRequest()
-        //hitPostRequest()
+        hitPostRequest()
         //Alamofire
         //hitGetRequestAF()
-        hitPostRequestAF()
+        //hitPostRequestAF()
     }
     
     
@@ -65,13 +65,10 @@ class ViewController: UIViewController {
         ]
         DataHelper2().sendPostRequest(url: "https://jsonplaceholder.typicode.com/posts", parameters: parameters) { (data, success) in
             if success{
-                if let postedData = data{
-                    if let body = postedData.body {
+                let objDataModel2 = data as! DataModel2
+                    if let body = objDataModel2.body {
                         print(body)
                     }
-                }else{
-                    print("Data not received")
-                }
             }
             
         }
@@ -86,15 +83,11 @@ class ViewController: UIViewController {
         ]
         DataHelper2().sendPostRequestAF(url: "https://jsonplaceholder.typicode.com/posts", parameters: parameters) { (data, success) in
             if success{
-                if let postedData = data{
-                    if let body = postedData.body {
+                let objDataModel2 = data as! DataModel2
+                    if let body = objDataModel2.body {
                         print(body)
                     }
-                }else{
-                    print("Data not received")
-                }
             }
-            
         }
     }
 

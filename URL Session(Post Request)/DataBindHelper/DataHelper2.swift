@@ -11,7 +11,7 @@ import Foundation
 
 class DataHelper2{
     
-    public func sendPostRequest(url: String,parameters:[String:Any?],completion:@escaping(_ response:DataModel2?,_ success:Bool)->Void)
+    public func sendPostRequest(url: String,parameters:[String:Any?],completion:@escaping(_ response:Any,_ success:Bool)->Void)
     {
         var objDataModel2:DataModel2? = nil
         NetworkManager.shared.performPostRequest(with: url, parameters: parameters) { (data, success) in
@@ -37,7 +37,7 @@ class DataHelper2{
         }
     }
     
-    public func sendPostRequestAF(url: String,parameters:[String:Any?],completion:@escaping(_ response:DataModel2?,_ success:Bool)->Void)
+    public func sendPostRequestAF(url: String,parameters:[String:Any?],completion:@escaping(_ response:Any,_ success:Bool)->Void)
         {
             var objDataModel2:DataModel2? = nil
             NetworkManager.shared.performPostRequestAF(with: url, parameters: parameters) { (data, success) in
